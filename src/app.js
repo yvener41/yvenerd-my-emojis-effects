@@ -1,11 +1,42 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+const myEffect = document.querySelector("#emoji");
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const emojis = [
+  "😆",
+  "😅",
+  "🤣",
+  "😂",
+  "😀",
+  "🤑",
+  "🤨",
+  "🙂",
+  "😊",
+  "😗",
+  "😛",
+  "😏",
+  "🤥",
+  "😴",
+  "🥺",
+  "😧",
+  "😇",
+  "😳",
+  "🙃",
+  "🥴",
+  "🧐",
+  "🤨",
+  "😒",
+  "🤔",
+  "🤭",
+  "🥰",
+  "🤐",
+  "😄",
+  "🤔",
+  "🤪",
+  "🥲",
+  "😃",
+  "😁",
+  "😬"
+];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+myEffect.addEventListener("mouseover", () => {
+  myEffect.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+});
